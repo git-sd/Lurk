@@ -46,6 +46,16 @@
 
 ---
 
+Every AI assistant you've used has been watching. Every message you type goes to a server somewhere, gets logged, filtered, moderated, and fed back into a model you don't control. You agreed to it in a terms of service nobody reads.
+
+Lurk doesn't do any of that. It runs entirely on your machine — no internet connection required after setup, no API keys, no accounts, no telemetry. The model lives on your hard drive. Your conversations never leave your computer. There's no company sitting between you and the AI reading what you type.
+
+It's also unfiltered. Most AI assistants will refuse things, add disclaimers, lecture you, or just be useless the moment you ask anything remotely edgy. Lurk doesn't care. It runs locally, so there's nobody to answer to. Say whatever you want.
+
+Built as a proper terminal app — fullscreen, keyboard-driven, live hardware stats. Not a web wrapper. Not an electron app. Just a terminal.
+
+---
+
 ## Features
 
 - **Fully offline** — powered by llama.cpp, everything runs on your machine
