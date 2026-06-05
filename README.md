@@ -1,34 +1,50 @@
 ```
-                    ██╗      ██╗   ██╗██████╗ ██╗  ██╗
-                    ██║      ██║   ██║██╔══██╗██║ ██╔╝
-                    ██║      ██║   ██║██████╔╝█████╔╝
-                    ██║      ██║   ██║██╔══██╗██╔═██╗
-                    ███████╗ ╚██████╔╝██║  ██║██║  ██╗
-                    ╚══════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+                     ##                      #####              
+                  ###  #                   ##     #             
+                 #0xxX# #                ##  #XXX# #            
+               # #00ooO# #####          #  #0xxoox###           
+               # #0Oo*=O#      ########  #0xxxxxx=O #           
+               ###0xxo*=xX#####        #XOxxxoooxoo#            
+           ####  XxxxOOxxxxxxxOOOO00XXXOooxxooooxxo# #          
+         ##    #XOO0000Oxxxxxxxxxxxxxooooxxx==*=xxo# #          
+        #  #XX000000000xxxxxxxxxxxxxxxooxxxo=**ox=x##           
+       # #X0000000O000xxxxxxOOxxxxxxxxxxxxo**=xxooX #           
+      # #0O0000OxOxOOxxxxxO0000OxxxxxxxxxxxooxxxxxO# #          
+      ##X0XX00=,.;xxxxxxxO00000Oxxxxxxxxxxxxxxxxxxxx# #         
+     # XX###XO*  :xxxxxOxx00xxo+=xxxxxxxxxxxxxxxxxxxO##         
+      ######0OOxoOxOOO0Oxxx+OO,  ;xxxOOO0OxxOOxxxxxxxX #        
+      ######XXXXX000000xxxo+xO;:+oxxX#########XOxxxxx0##        
+     ######Xx==oox00000O00xxoxxxOOX############XOxxxxO #        
+    ######0.   .  ,0#XXX000XXXXX################Oxxxxx# #       
+    ######X;   .  ,O ###X0X#####################OxxxxxO##       
+    #####0=*,..:+*x#####00X#####################0xxxxxxX #      
+    #####Xx==**===x####000X#########XXXXXXXXXXXOxxxxxxxO #      
+    #######o++;++*xXXX000O0XXXXXXXXXXXXXXXXXXXXxxxxxxxxOX##     
+     #####X0OOxxoo==ooxOOO00XXXXXXXXX000XXXXX0xxxxxoxxxx0# #    
+     ######X000XXXX00000XX0XXXXXXXX00XXXXXXXX0xxxooxxxxx0X#     
+      #XXX0000000000XXXXXXXXXXXXX0000XXXXXX0xxxoooxxxxxx0X      
+     # X000000000000XXXXXXXXX000000XXXXXXXXOOxooooxxxxx0X0# #   
+    # #X000000000000000XXXXX000000XX0XXXXXXOxooooxxxOO000xO #   
+    # #XXX000000000000000000000000XXXXXXXXXX0oooxxx0XX0XOox# #  
+     #XXXXX000OOOOOOOOOOOOOOO0000XXXXXXXXXX0xxxO00X000X0ooo# #  
+   # #XXXXXXX000OOOOOOOOOO00000000000000000000XXXXXX00XOoooX #  
+   # #XXXXXXXXX00000OOOO00000000000000000000XXXXXXXXX0XOooo0 #  
+    #XXXXXXXXXXX0000OOO0000000000000000000XXXXXXXXXXX0xooooO #  
+  # #XXXXXXXXXXXXX0X000X000000000000000XXXXXXXXXXXXXOxooxxo0 #  
 ```
 
 ```
-          / \      _
-      ___/   \____/ \        such local
-     /               \         very offline
-    |    ^       ^    |           wow AI
-    |       ___       |
-     \     (   )     /
-      \     ---     /
-       `--_______--'
-      /             \
-     / |           | \
-    /  |           |  \
-        \         /
-         |       |
-        /|       |\
+  ██╗      ██╗   ██╗██████╗ ██╗  ██╗
+  ██║      ██║   ██║██╔══██╗██║ ██╔╝
+  ██║      ██║   ██║██████╔╝█████╔╝
+  ██║      ██║   ██║██╔══██╗██╔═██╗
+  ███████╗ ╚██████╔╝██║  ██║██║  ██╗
+  ╚══════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ```
 
----
+**Fully offline AI assistant that runs in your terminal. No cloud. No filters. No bullshit.**
 
-**Lurk** is a fullscreen, fully offline AI assistant that runs directly in your terminal. No cloud. No filters. No bullshit.
-
-Built by [Shreyan Das](https://github.com/Shreyan11)
+Built by [Shreyan Das](https://github.com/git-sd)
 
 ---
 
@@ -47,16 +63,16 @@ Built by [Shreyan Das](https://github.com/Shreyan11)
 
 ## Install
 
-**Requirements:** Python 3.10+, Windows (Linux/Mac mostly works too)
+**Requirements:** Python 3.10+, Windows
 
 ```bash
-git clone https://github.com/Shreyan11/lurk
-cd lurk
+git clone https://github.com/git-sd/Lurk
+cd Lurk
 pip install -e .
 lurk
 ```
 
-Or just run directly:
+Or run directly:
 
 ```bash
 python lurk.py
@@ -109,17 +125,18 @@ Models are stored in `~/LURK/models/`.
 /done
 ```
 
-Next time you open Lurk, select that learning at the prompt and it loads the notes into context. The AI will know your preferences without you repeating yourself.
+Next time you open Lurk, select that learning at the prompt and it loads into context automatically.
 
 ---
 
 ## Fan Control
 
-By default, Lurk forces your CPU to 100% minimum frequency while the AI generates — more heat, fans spin up, back to normal when it's done. No extra software needed.
+By default, Lurk forces your CPU to 100% minimum frequency while the AI generates — more heat, fans spin up, back to normal when done. No extra software needed.
 
-If you have dedicated fan control software:
+To use dedicated fan control software instead:
 ```
 /fans set <spin_up_command> | <cool_down_command>
+/fans test
 ```
 
 ---
