@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lurk-shreyan"
+version = "1.0.0"
+description = "Lurk - Local AI terminal assistant with full system access. By Shreyan Das."
+requires-python = ">=3.10"
+dependencies = [
+    "rich>=13.7.0",
+    "pyfiglet>=1.0.2",
+    "psutil>=5.9.8",
+    "requests>=2.31.0",
+    "httpx>=0.27.0",
+    "prompt_toolkit>=3.0.43",
+    "wmi>=1.5.1; sys_platform == 'win32'",
+]
+
+[project.scripts]
+lurk = "lurk:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lurk*"]
+
+[tool.setuptools]
+py-modules = ["lurk", "hardware", "models", "server", "inference", "tools", "fans", "learnings"]

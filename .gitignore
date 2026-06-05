@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+aria.py
+aria.bat
+gen_ascii.py
+preview_banner.html
+banner_out.txt
