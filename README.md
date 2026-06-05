@@ -1,50 +1,48 @@
 ```
-                     ##                      #####              
+                     ##                      #####                        wow
                   ###  #                   ##     #             
                  #0xxX# #                ##  #XXX# #            
-               # #00ooO# #####          #  #0xxoox###           
+               # #00ooO# #####          #  #0xxoox###                 such offline
                # #0Oo*=O#      ########  #0xxxxxx=O #           
-               ###0xxo*=xX#####        #XOxxxoooxoo#            
+               ###0xxo*=xX#####        #XOxxxoooxoo#                  very local ai
            ####  XxxxOOxxxxxxxOOOO00XXXOooxxooooxxo# #          
-         ##    #XOO0000Oxxxxxxxxxxxxxooooxxx==*=xxo# #          
+         ##    #XOO0000Oxxxxxxxxxxxxxooooxxx==*=xxo# #                much private
         #  #XX000000000xxxxxxxxxxxxxxxooxxxo=**ox=x##           
-       # #X0000000O000xxxxxxOOxxxxxxxxxxxxo**=xxooX #           
+       # #X0000000O000xxxxxxOOxxxxxxxxxxxxo**=xxooX #                 so no cloud
       # #0O0000OxOxOOxxxxxO0000OxxxxxxxxxxxooxxxxxO# #          
-      ##X0XX00=,.;xxxxxxxO00000Oxxxxxxxxxxxxxxxxxxxx# #         
+      ##X0XX00=,.;xxxxxxxO00000Oxxxxxxxxxxxxxxxxxxxx# #               many smart
      # XX###XO*  :xxxxxOxx00xxo+=xxxxxxxxxxxxxxxxxxxO##         
-      ######0OOxoOxOOO0Oxxx+OO,  ;xxxOOO0OxxOOxxxxxxxX #        
+      ######0OOxoOxOOO0Oxxx+OO,  ;xxxOOO0OxxOOxxxxxxxX #             very fast
       ######XXXXX000000xxxo+xO;:+oxxX#########XOxxxxx0##        
-     ######Xx==oox00000O00xxoxxxOOX############XOxxxxO #        
+     ######Xx==oox00000O00xxoxxxOOX############XOxxxxO #              wow
     ######0.   .  ,0#XXX000XXXXX################Oxxxxx# #       
-    ######X;   .  ,O ###X0X#####################OxxxxxO##       
+    ######X;   .  ,O ###X0X#####################OxxxxxO##             such learn
     #####0=*,..:+*x#####00X#####################0xxxxxxX #      
-    #####Xx==**===x####000X#########XXXXXXXXXXXOxxxxxxxO #      
+    #####Xx==**===x####000X#########XXXXXXXXXXXOxxxxxxxO #            so terminal
     #######o++;++*xXXX000O0XXXXXXXXXXXXXXXXXXXXxxxxxxxxOX##     
-     #####X0OOxxoo==ooxOOO00XXXXXXXXX000XXXXX0xxxxxoxxxx0# #    
+     #####X0OOxxoo==ooxOOO00XXXXXXXXX000XXXXX0xxxxxoxxxx0# #          amaze
      ######X000XXXX00000XX0XXXXXXXX00XXXXXXXX0xxxooxxxxx0X#     
-      #XXX0000000000XXXXXXXXXXXXX0000XXXXXX0xxxoooxxxxxx0X      
+      #XXX0000000000XXXXXXXXXXXXX0000XXXXXX0xxxoooxxxxxx0X            very doge ai
      # X000000000000XXXXXXXXX000000XXXXXXXXOOxooooxxxxx0X0# #   
-    # #X000000000000000XXXXX000000XX0XXXXXXOxooooxxxOO000xO #   
+    # #X000000000000000XXXXX000000XX0XXXXXXOxooooxxxOO000xO #         much lurk
     # #XXX000000000000000000000000XXXXXXXXXX0oooxxx0XX0XOox# #  
-     #XXXXX000OOOOOOOOOOOOOOO0000XXXXXXXXXX0xxxO00X000X0ooo# #  
+     #XXXXX000OOOOOOOOOOOOOOO0000XXXXXXXXXX0xxxO00X000X0ooo# #        so offline
    # #XXXXXXX000OOOOOOOOOO00000000000000000000XXXXXX00XOoooX #  
-   # #XXXXXXXXX00000OOOO00000000000000000000XXXXXXXXX0XOooo0 #  
+   # #XXXXXXXXX00000OOOO00000000000000000000XXXXXXXXX0XOooo0 #        wow
     #XXXXXXXXXXX0000OOO0000000000000000000XXXXXXXXXXX0xooooO #  
-  # #XXXXXXXXXXXXX0X000X000000000000000XXXXXXXXXXXXXOxooxxo0 #  
+  # #XXXXXXXXXXXXX0X000X000000000000000XXXXXXXXXXXXXOxooxxo0 #
 ```
 
 ```
-  ██╗      ██╗   ██╗██████╗ ██╗  ██╗
+  ██╗      ██╗   ██╗██████╗ ██╗  ██╗        local. offline. unfiltered.
   ██║      ██║   ██║██╔══██╗██║ ██╔╝
-  ██║      ██║   ██║██████╔╝█████╔╝
+  ██║      ██║   ██║██████╔╝█████╔╝              type  lurk  to  run
   ██║      ██║   ██║██╔══██╗██╔═██╗
-  ███████╗ ╚██████╔╝██║  ██║██║  ██╗
+  ███████╗ ╚██████╔╝██║  ██║██║  ██╗        no cloud  •  no filters  •  no bs
   ╚══════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
 ```
 
-**Fully offline AI assistant that runs in your terminal. No cloud. No filters. No bullshit.**
-
-Built by [Shreyan Das](https://github.com/git-sd)
+**Built by [Shreyan Das](https://github.com/git-sd)**
 
 ---
 
@@ -72,12 +70,6 @@ pip install -e .
 lurk
 ```
 
-Or run directly:
-
-```bash
-python lurk.py
-```
-
 ---
 
 ## Commands
@@ -95,7 +87,6 @@ python lurk.py
 | `/fans test` | Test fan spin for 3 seconds |
 | `/clear` | Clear chat history |
 | `/restart` | Reload the model |
-| `/help` | Show all commands |
 | `/exit` | Quit |
 
 ---
