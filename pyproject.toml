@@ -25,4 +25,4 @@ where = ["."]
 include = ["lurk*"]
 
 [tool.setuptools]
-py-modules = ["lurk", "hardware", "models", "server", "inference", "tools", "fans", "learnings"]
+py-modules = ["lurk", "hardware", "models", "server", "inference", "tools", "learnings"]

@@ -59,11 +59,10 @@ Built as a proper terminal app — fullscreen, keyboard-driven, live hardware st
 ## Features
 
 - **Fully offline** — powered by llama.cpp, everything runs on your machine
-- **Fullscreen TUI** — split-pane terminal UI with live hardware stats, ASCII doge, and scrollable chat
+- **Fullscreen TUI** — split-pane terminal UI with live hardware stats and ASCII doge
 - **No filter** — seriously, none
 - **Tool use** — reads/writes files, runs shell commands
 - **Teach mode** — `/teach` to teach it stuff, saved as persistent learnings loaded on startup
-- **Fan control** — spins your fans when the AI is generating, cools down when done
 - **Model switching** — swap between models mid-session with `/model`
 - **Live stats bar** — CPU, RAM, GPU, VRAM, NPU all live at the bottom
 
@@ -92,9 +91,6 @@ lurk
 | `/learnings` | List all saved learnings |
 | `/learnings load <name>` | Load a learning into this session |
 | `/learnings delete <name>` | Delete a saved learning |
-| `/fans` | Show fan control status |
-| `/fans set <on_cmd> \| <off_cmd>` | Set custom fan commands |
-| `/fans test` | Test fan spin for 3 seconds |
 | `/clear` | Clear chat history |
 | `/restart` | Reload the model |
 | `/exit` | Quit |
@@ -127,18 +123,6 @@ Models are stored in `~/LURK/models/`.
 ```
 
 Next time you open Lurk, select that learning at the prompt and it loads into context automatically.
-
----
-
-## Fan Control
-
-By default, Lurk forces your CPU to 100% minimum frequency while the AI generates — more heat, fans spin up, back to normal when done. No extra software needed.
-
-To use dedicated fan control software instead:
-```
-/fans set <spin_up_command> | <cool_down_command>
-/fans test
-```
 
 ---
 

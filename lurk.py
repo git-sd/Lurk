@@ -19,7 +19,7 @@ from rich.progress import Progress, BarColumn, DownloadColumn, TransferSpeedColu
 from rich.prompt import Prompt
 from rich.rule import Rule
 from rich.live import Live
-import hardware, models, server, inference, fans
+import hardware, models, server, inference
 
 console = Console()
 
@@ -754,7 +754,7 @@ def chat_loop(model_name: str, hw: dict, npu: dict | None = None, loaded_learnin
         ("/teach",     "start teaching"),
         ("/done",      "save & end teach"),
         ("/learnings", "manage"),
-        ("/exit",      "quit lurk"),
+        ("/exit",      "quit"),
     ]:
         _sidebar_frags.append((S_PURPLE, f"  {_cmd:<10}"))
         _sidebar_frags.append((S_DIM,    f"  {_cdesc}\n"))
@@ -779,6 +779,7 @@ def chat_loop(model_name: str, hw: dict, npu: dict | None = None, loaded_learnin
         ("/help",      "show help"),
         ("/exit",      "quit"),
     ]
+
 
     def get_hints_ft() -> FormattedText:
         frags: list = []
@@ -885,7 +886,6 @@ def chat_loop(model_name: str, hw: dict, npu: dict | None = None, loaded_learnin
             append(S_AI, "  ")
 
             def _save_teaching():
-                fans.on()
                 try:
                     summary_prompt = (
                         f"The user just taught you the following during a teaching session called '{name}'.\n\n"
@@ -910,45 +910,9 @@ def chat_loop(model_name: str, hw: dict, npu: dict | None = None, loaded_learnin
                 except Exception as e:
                     append(S_ERR, f"\n  Error saving: {e}\n\n")
                 finally:
-                    fans.off()
                     streaming[0] = False
 
             threading.Thread(target=_save_teaching, daemon=True).start()
-            return
-
-        # /fans — configure fan control commands
-        if cmd.startswith("/fans"):
-            sub = raw[5:].strip()
-            if sub.startswith("set "):
-                parts = sub[4:].strip().split("|", 1)
-                if len(parts) == 2:
-                    fans.set_commands(parts[0].strip(), parts[1].strip())
-                    append(S_DIM, f"\n  Fan commands saved.\n\n")
-                else:
-                    append(S_DIM, "\n  Usage: /fans set <on_cmd> | <off_cmd>\n\n")
-            elif sub == "clear":
-                fans.clear_commands()
-                append(S_DIM, "\n  Fan commands cleared.\n\n")
-            elif sub == "test":
-                append(S_DIM, "\n  Spinning up... ")
-                fans.on()
-                import time as _t; _t.sleep(3)
-                fans.off()
-                append(S_DIM, "done.\n\n")
-            else:
-                s = fans.status()
-                append(S_HEADER, "\n  Fan Control\n")
-                if s["on_cmd"]:
-                    append(S_DIM, f"  Mode:         custom commands\n")
-                    append(S_DIM, f"  On:           {s['on_cmd']}\n")
-                    append(S_DIM, f"  Off:          {s['off_cmd']}\n")
-                else:
-                    append(S_DIM, f"  Mode:         CPU min-frequency (default)\n")
-                    append(S_DIM, f"  Current min:  {s['cpu_min_pct']}%\n")
-                    append(S_DIM, f"  When active:  forces CPU to 100% min → heat → fans\n")
-                append(S_DIM, "\n  /fans set <on_cmd> | <off_cmd>   use a custom tool instead\n")
-                append(S_DIM,    "  /fans clear                       go back to default\n")
-                append(S_DIM,    "  /fans test                        spin up for 3s\n\n")
             return
 
         # /learnings — list, load, or delete learnings
@@ -1013,7 +977,6 @@ def chat_loop(model_name: str, hw: dict, npu: dict | None = None, loaded_learnin
         _extra = (_learning_ctx[0] + ("\n\n" + _teach_ctx_now if _teach_ctx_now else "")).strip()
 
         def run_inference(extra=_extra):
-            fans.on()
             try:
                 def on_token(t: str):
                     append(S_AI, t)
@@ -1041,7 +1004,6 @@ def chat_loop(model_name: str, hw: dict, npu: dict | None = None, loaded_learnin
                 if history and history[-1]["role"] == "user":
                     history.pop()
             finally:
-                fans.off()
                 streaming[0] = False
 
         threading.Thread(target=run_inference, daemon=True).start()
